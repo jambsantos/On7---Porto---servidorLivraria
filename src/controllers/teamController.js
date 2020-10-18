@@ -49,10 +49,60 @@ const deleteTeam =(req,res) => {
     res.status(200).send(team);
 }
 
+const putTeam = (req,res)=>{
+    try {
+    const id = req.params.id;
+    const modifyTeam = team.find((colab) => colab.id == id);
+    const updatedTeam = req.body;
+    const index = team.indexOf(modifyTeam);
+
+    team.splice(index,1,updatedTeam);
+
+    fs.writeFile("./src/models/team.json",JSON.stringify(team),'utf8',function(err){
+        if (err){
+            return res.status(424).send({message:err});
+        }
+            console.log("Team atualizado com sucesso!");
+        });
+
+    res.status(200).send(team);
+    } catch (err){
+    return res.status(424).send({message:err})
+      }
+}
+
+const patchTeam = (req,res)=>{
+    const id = req.params.id;
+    const uptaded = req.body;
+    try {
+    const modifyTeam = team.find((colab) => colab.id == id);
+    const index = team.indexOf(modifyTeam);
+
+   Object.keys(uptaded).forEach((chave) => {
+      modifyTeam[chave]=uptaded[chave]
+   });
+
+    team.splice(index,1,modifyTeam);
+
+    fs.writeFile("./src/models/team.json",JSON.stringify(team),'utf8',function(err){
+        if (err){
+            return res.status(424).send({message:err});
+        }
+            console.log("Atualização team com sucesso!");
+        });
+
+    res.status(200).send(team);
+   } catch (err) {
+    return res.status(424).send({ message: err });
+  }
+}
+
 module.exports = {
     getAll,
     getById,
     getAgeById,
     postTeam,
-    deleteTeam
+    deleteTeam,
+    putTeam, 
+    patchTeam
 }

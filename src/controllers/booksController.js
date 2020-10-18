@@ -41,19 +41,66 @@ const deleteBooks =(req,res) => {
         if (err){
             return res.status(424).send({message:err});
         }
-            console.log("Books deletado com sucesso!");
+            console.log("Book deletado com sucesso!");
         });
 
     res.status(200).send(books);
 }
 
+const putBooks = (req,res)=>{
+    try{
+    const id = req.params.id;
+    const modifyBooks = books.find((book) => book.id == id);
+    const updatedBooks = req.body;
+    const index = books.indexOf(modifyBooks);
 
+    books.splice(index,1,updatedBooks);
 
+    fs.writeFile("./src/models/books.json",JSON.stringify(books),'utf8',function(err){
+        if (err){
+            return res.status(424).send({message:err});
+        }
+            console.log("Quantidade atualizada com sucesso!");
+        });
+
+    res.status(200).send(books);
+    } catch (err) {
+    return res.status(424).send({ message: err });
+  }
+}
+
+const patchBooks = (req,res)=>{
+    const id = req.params.id;
+    const uptaded = req.body;
+    try {
+    const modifyBooks = books.find((book) => book.id == id);
+    const index = books.indexOf(modifyBooks);
+
+   Object.keys(uptaded).forEach((chave) => {
+      modifyBooks[chave]=uptaded[chave]
+   });
+
+    books.splice(index,1,modifyBooks);
+
+    fs.writeFile("./src/models/books.json",JSON.stringify(books),'utf8',function(err){
+        if (err){
+            return res.status(424).send({message:err});
+        }
+            console.log("Atualização livros com sucesso!");
+        });
+
+    res.status(200).send(books);
+    } catch (err) {
+    return res.status(424).send({ message: err });
+  }
+}
 
 module.exports = {
     getAll,
     getById,
     getByCategoria, 
     postBooks,
-    deleteBooks
+    deleteBooks,
+    putBooks,
+    patchBooks
 }
