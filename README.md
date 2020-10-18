@@ -1,9 +1,23 @@
 # Projeto-Prático-Livraria - PUT-PATCH
-## Atividade Semana9  
+## Atividade Semana10  
+
+#### Desenvolvimento em aula
+Vamos dar continuidade ao projeto desenvolvido durante as aulas de GET, POST e DELETE.
+
+#### Exercícios
+Vamos dar continuidade ao nosso projeto da livraria.
+
+1 - Para os livros, crie um método em que será possível a atualização do campo Nome utilizando o método HTTP PUT.
+
+2 - Para os livros, crie um método em que será possível a atualização do campo Nome utilizando o método HTTP PATCH.
+
+3 - Para os funcionários, crie um método em que será possível a atualização do campo Nome utilizando o método HTTP PUT.
+
+4 - Para os funcionários, crie um método em que será possível a atualização do campo Nome utilizando o método HTTP PATCH.
 
 - Exercício proposto: criação de controle de servidor para livros e funcinários de uma livraria com controles de adição, exclusão e quantidade dos itens.  
 
-### :memo: Briefing 
+### :memo: Briefing GET - POST - DELETE
 
 Você foi contratada para fazer a implementação de um sistema de uma livraria no centro de Recife. 
 
