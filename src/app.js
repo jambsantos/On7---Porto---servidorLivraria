@@ -1,14 +1,23 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
 
+//rotas
 const index = require('./routes/index');
 const books = require('./routes/booksRoutes');
 const team = require('./routes/teamRoutes');
 
 
-app.use((req,res,next)=> {
-    console.log("Nova requisição realizada");
+//configurar bodyParser
+app.use(bodyParser.json());
 
+app.use((req,res,next)=> {
+    res.header("Access-Control-Allow-Origin", "*")
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  )
+    console.log("Nova requisição realizada");
     next()
 });
 

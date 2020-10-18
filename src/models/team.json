@@ -5,7 +5,7 @@
     "idade":25,
     "funcao":"CTO",
     "data da admissão":"07/07/2020",
-    "aniversário":"24/12/1995"
+    "aniversario":"24/12/1995"
 },
 {
     "id":2,
@@ -14,7 +14,7 @@
     "idade":29,
     "funcao":"Arquivista",
     "data da admissão":"09/05/2020",
-    "aniversário":"04/03/1991"
+    "aniversario":"04/03/1991"
 },
 {
     "id":3,
@@ -23,7 +23,7 @@
     "idade":50,
     "funcao":"Pesquisa",
     "data da admissão":"15/04/1990",
-    "aniversário":"02/11/1970"
+    "aniversario":"02/11/1970"
 },
 {
     "id":4,
@@ -32,7 +32,7 @@
     "idade":45,
     "funcao":"Gerente de vendas",
     "data da admissão":"21/03/1999",
-    "aniversário":"31/12/1975"
+    "aniversario":"31/12/1975"
 },
 {
     "id":5,
@@ -41,7 +41,7 @@
     "idade":30,
     "funcao":"Vendedora",
     "data da admissão":"30/06/1997",
-    "aniversário":"22/10/1990"
+    "aniversario":"22/10/1990"
 },
 {
     "id":6,
@@ -50,7 +50,7 @@
     "idade":23,
     "funcao":"Vendedor",
     "data da admissão":"30/06/2018",
-    "aniversário":"19/05/1997"
+    "aniversario":"19/05/1997"
 },
 {
     "id":7,
@@ -59,7 +59,7 @@
     "idade":25,
     "funcao":"Vendedora",
     "data da admissão":"18/06/2016",
-    "aniversário":"19/05/1995"
+    "aniversario":"19/05/1995"
 },
 {
     "id":8,
@@ -68,7 +68,7 @@
     "idade":33,
     "funcao":"Vendedora",
     "data da admissão":"15/07/2010",
-    "aniversário":"19/05/1987"
+    "aniversario":"19/05/1987"
 },
 {
     "id":9,
@@ -77,6 +77,6 @@
     "idade":40,
     "funcao":"Auxiliar de contabilidade",
     "data da admissão":"10/01/2010",
-    "aniversário":"07/03/1980"
+    "aniversario":"07/03/1980"
 }
 ]
